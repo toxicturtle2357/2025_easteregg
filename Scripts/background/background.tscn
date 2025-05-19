@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu25oq37pgd7l"]
+
+[ext_resource type="Texture2D" uid="uid://d4ffgysdhwyl7" path="res://Images/background/background_dummydata.jpg" id="1_2daj0"]
+
+[node name="TempBackground" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1024, 512)
+
+[node name="TempBackground" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("1_2daj0")
+centered = false
