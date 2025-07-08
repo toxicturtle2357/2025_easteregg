@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bynyymf127kol"
-path="res://.godot/imported/portal_sprite.png-aab7b5bd16ffc726489e2479fa6428f8.ctex"
+uid="uid://d1y3eunf0nids"
+path="res://.godot/imported/seesaw_move.png-d6a2dc2270792159e30c44e1b7bca8a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/tools/portal_sprite.png"
-dest_files=["res://.godot/imported/portal_sprite.png-aab7b5bd16ffc726489e2479fa6428f8.ctex"]
+source_file="res://Assets/tools/seesaw/seesaw_move.png"
+dest_files=["res://.godot/imported/seesaw_move.png-d6a2dc2270792159e30c44e1b7bca8a1.ctex"]
 
 [params]
 

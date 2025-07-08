@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g6yrs07qrkk8"
-path="res://.godot/imported/button_sprite.png-d0a5fd5f485b7503e6b93d341ec7e3e9.ctex"
+uid="uid://cyomv8k7qe44n"
+path="res://.godot/imported/orb_concept.png-437a22bccaf7631cae7c91e197567fa1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/tools/button_sprite.png"
-dest_files=["res://.godot/imported/button_sprite.png-d0a5fd5f485b7503e6b93d341ec7e3e9.ctex"]
+source_file="res://Assets/tools/orb/orb_concept.png"
+dest_files=["res://.godot/imported/orb_concept.png-437a22bccaf7631cae7c91e197567fa1.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1y3eunf0nids"
-path="res://.godot/imported/seesaw_move.png-e9e0bacabf00a83eac9f42c6f3745499.ctex"
+uid="uid://d4ffgysdhwyl7"
+path="res://.godot/imported/background_dummydata.jpg-a2e6d24520f57e39aea013e6dae08fc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/tools/seesaw/seesaw_move.png"
-dest_files=["res://.godot/imported/seesaw_move.png-e9e0bacabf00a83eac9f42c6f3745499.ctex"]
+source_file="res://Assets/background/background_dummydata.jpg"
+dest_files=["res://.godot/imported/background_dummydata.jpg-a2e6d24520f57e39aea013e6dae08fc1.ctex"]
 
 [params]
 

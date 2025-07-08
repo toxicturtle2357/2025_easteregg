@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d16l6u7kt2het"
-path="res://.godot/imported/background_dummydata.png-a578f4b34284328bc079c01a30b3ccc2.ctex"
+uid="uid://dl23g0vexpb1p"
+path="res://.godot/imported/spring_sprite.png-8ae6a1faed9bd6370054a1fa96cb5472.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/background/background_dummydata.png"
-dest_files=["res://.godot/imported/background_dummydata.png-a578f4b34284328bc079c01a30b3ccc2.ctex"]
+source_file="res://Assets/tools/spring_sprite.png"
+dest_files=["res://.godot/imported/spring_sprite.png-8ae6a1faed9bd6370054a1fa96cb5472.ctex"]
 
 [params]
 

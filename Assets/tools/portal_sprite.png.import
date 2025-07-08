@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyomv8k7qe44n"
-path="res://.godot/imported/orb_concept.png-9712774b46ef1383e223bee32a63ff6d.ctex"
+uid="uid://bynyymf127kol"
+path="res://.godot/imported/portal_sprite.png-115c56b999b35fbc2c14a009da5a35e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/tools/orb/orb_concept.png"
-dest_files=["res://.godot/imported/orb_concept.png-9712774b46ef1383e223bee32a63ff6d.ctex"]
+source_file="res://Assets/tools/portal_sprite.png"
+dest_files=["res://.godot/imported/portal_sprite.png-115c56b999b35fbc2c14a009da5a35e3.ctex"]
 
 [params]
 

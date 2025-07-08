@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxfuu76q4cuy4"
-path="res://.godot/imported/seesaw_spritesheet.png-67ab4ac0a272e7f8ad31e8d623dff1df.ctex"
+uid="uid://dds7bk1jjn6e0"
+path="res://.godot/imported/door_platform_sprite.png-03ed07445686ff1f535e11f6c0013444.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/tools/seesaw/seesaw_spritesheet.png"
-dest_files=["res://.godot/imported/seesaw_spritesheet.png-67ab4ac0a272e7f8ad31e8d623dff1df.ctex"]
+source_file="res://Assets/tools/door_platform_sprite.png"
+dest_files=["res://.godot/imported/door_platform_sprite.png-03ed07445686ff1f535e11f6c0013444.ctex"]
 
 [params]
 

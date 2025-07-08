@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dds7bk1jjn6e0"
-path="res://.godot/imported/door_platform_sprite.png-0328de0fca85c602faa6e8ed8b790b34.ctex"
+uid="uid://dihafi7jcwu0p"
+path="res://.godot/imported/bomb_box_sprite.png-1998e3bbc062a85fd6ddd22e266d8ab5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/tools/door_platform_sprite.png"
-dest_files=["res://.godot/imported/door_platform_sprite.png-0328de0fca85c602faa6e8ed8b790b34.ctex"]
+source_file="res://Assets/tools/bomb_box_sprite.png"
+dest_files=["res://.godot/imported/bomb_box_sprite.png-1998e3bbc062a85fd6ddd22e266d8ab5.ctex"]
 
 [params]
 
