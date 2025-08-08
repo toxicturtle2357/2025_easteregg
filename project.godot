@@ -11,6 +11,10 @@ config_version=5
 [application]
 
 config/name="easteregg_2025_game_title"
-run/main_scene="res://Scripts/World/temp_world.tscn"
+run/main_scene="uid://c2wh5vtm74743"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
