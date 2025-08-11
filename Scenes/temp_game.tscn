@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2wh5vtm74743"]
+[gd_scene load_steps=7 format=3 uid="uid://c2wh5vtm74743"]
 
 [ext_resource type="PackedScene" uid="uid://437tb3lvohge" path="res://Scripts/Player/temp_player.tscn" id="1_aesg2"]
 [ext_resource type="Texture2D" uid="uid://lucu2gjr0g8w" path="res://Assets/Images/tiles/dummydata_tiles.png" id="2_1oat4"]
+[ext_resource type="PackedScene" uid="uid://b1xembc30pkrg" path="res://Scripts/Tools/spring.tscn" id="3_snapn"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1oat4"]
 bounce = 0.05
@@ -164,13 +165,17 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_1oat4")
 sources/0 = SubResource("TileSetAtlasSource_snapn")
 
-[node name="tempGame" type="Node2D"]
+[node name="testGame" type="Node2D"]
 
 [node name="tempPlayer" parent="." instance=ExtResource("1_aesg2")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="tempPlayer"]
+zoom = Vector2(3, 3)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_d0710")
 format = 2
 layer_0/tile_data = PackedInt32Array(2, 0, 0, 65533, 0, 0, 65532, 0, 0, 3, 0, 0, 4, 0, 0, 65531, 0, 0, 65530, 0, 0, 65529, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, -65531, 0, 0, -65532, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -65528, 0, 0, -65529, 0, 0, -65530, 0, 0, -196601, 0, 0, -196600, 0, 0, -262136, 0, 0, -262135, 0, 0, 131065, 0, 0, 131066, 0, 0, 131067, 0, 0, 131068, 0, 0, 131069, 0, 0, 131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, -262134, 589824, 0, -262133, 655360, 0, -262132, 720896, 0, -262131, 0, 0, -262130, 65536, 0, -262129, 0, 0, -262128, 65536, 0, -196593, 0, 0, -196592, 65536, 0, -196595, 0, 0, -196594, 65536, 0)
+
+[node name="Spring" parent="." instance=ExtResource("3_snapn")]
+position = Vector2(92, -32)

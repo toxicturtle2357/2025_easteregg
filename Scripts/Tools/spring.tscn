@@ -1,0 +1,159 @@
+[gd_scene load_steps=16 format=3 uid="uid://b1xembc30pkrg"]
+
+[ext_resource type="Script" uid="uid://bsqdd572n3avu" path="res://Scripts/Tools/spring.gd" id="1_1akfw"]
+[ext_resource type="Texture2D" uid="uid://dl23g0vexpb1p" path="res://Assets/tools/spring_sprite.png" id="1_4ctat"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1akfw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ra2dk"]
+atlas = ExtResource("1_4ctat")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqyl6"]
+atlas = ExtResource("1_4ctat")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58x0c"]
+atlas = ExtResource("1_4ctat")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_843y4"]
+atlas = ExtResource("1_4ctat")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swa3e"]
+atlas = ExtResource("1_4ctat")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8t4n"]
+atlas = ExtResource("1_4ctat")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6jyje"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ra2dk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqyl6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58x0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_843y4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swa3e")
+}],
+"loop": false,
+"name": &"activated",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8t4n")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1akfw"]
+size = Vector2(19, 12.25)
+
+[sub_resource type="Animation" id="Animation_ra2dk"]
+resource_name = "activate"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(0.5, 2, 0.5, 2, 0.5),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.8), Vector2(1, 0.7), Vector2(1, 0.55), Vector2(1, 0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(2, 0.5, 2, 0.5),
+"update": 0,
+"values": [Vector2(0, -5), Vector2(0, -4), Vector2(0, -3.5), Vector2(0, -3.3)]
+}
+
+[sub_resource type="Animation" id="Animation_mqyl6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -4)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_58x0c"]
+_data = {
+&"RESET": SubResource("Animation_mqyl6"),
+&"activate": SubResource("Animation_ra2dk")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_843y4"]
+size = Vector2(19, 7)
+
+[node name="Spring" type="AnimatableBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_1akfw")
+script = ExtResource("1_1akfw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -9)
+scale = Vector2(0.296875, 0.289063)
+sprite_frames = SubResource("SpriteFrames_6jyje")
+animation = &"activated"
+frame = 4
+frame_progress = 1.0
+speed_scale = 4.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_1akfw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CollisionShape2D"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_58x0c")
+}
+speed_scale = 8.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -8.5)
+shape = SubResource("RectangleShape2D_843y4")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
