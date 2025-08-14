@@ -15,6 +15,10 @@ run/main_scene="uid://c2wh5vtm74743"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PortalManager="*res://PortalManager.gd"
+
 [input]
 
 jump={
